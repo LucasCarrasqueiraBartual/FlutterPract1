@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application/screens/HomePage.dart';
-import 'package:flutter_application/screens/alert_page.dart';
-import 'package:flutter_application/screens/avatar_page.dart';
-import 'package:flutter_application/screens/home_temp.dart';
+import 'package:flutter_application/routes/routes.dart';
 
 void main() => runApp(const MyApp());
 
@@ -16,11 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Components',
       //home: Homepage(),
       initialRoute: '/',
-      routes: <String, WidgetBuilder>{
-        '/'     : (BuildContext context) => Homepage(),
-        'alert' : (BuildContext context) => AlertPage(),
-        'avatar': (BuildContext context) => AvatarPage()
-      },
+      routes: rutes,
       onGenerateRoute: (RouteSettings settings) {
         print("Hem anat a: ${settings.name}");
       },
